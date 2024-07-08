@@ -4,11 +4,7 @@ import lombok.*;
 
 import java.net.URL;
 
-@Getter @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString(exclude = "minutes")
-@EqualsAndHashCode(exclude = "minutes")
+@Data
 public class Movie {
 
     @Getter(AccessLevel.PUBLIC)
