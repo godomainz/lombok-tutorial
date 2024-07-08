@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Builder
-@Slf4j(topic = "MovieDAO")
+@CustomLog
 public class Movie {
 
     @Accessors(fluent = true)
@@ -33,7 +33,7 @@ public class Movie {
     private List<String> cast;
 
     public int getMinutesPlusX(@NonNull int x){
-        log.info("Adding {} ", x);
+        log.info("Adding " + x);
         return this.minutes + x;
     }
 
