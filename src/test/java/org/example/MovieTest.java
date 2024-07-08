@@ -20,6 +20,9 @@ public class MovieTest {
         movie.setLanguage("English");
         movie.setOfficialSite(new URL("https://www.imdb.com/title/tt0133093/"));
         movie.setRating(8);
+        System.out.println(movie.toString());
+        System.out.println(movie.hashCode());
+        System.out.println(movie.equals(movie));
     }
 
     @Test

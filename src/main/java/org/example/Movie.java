@@ -7,10 +7,12 @@ import java.net.URL;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class Movie {
 
-    @Getter(AccessLevel.NONE)
-    @Setter(AccessLevel.NONE)
+    @Getter(AccessLevel.PUBLIC)
+    @Setter(AccessLevel.PUBLIC)
     private Long id;
     private String title;
     private String description;
