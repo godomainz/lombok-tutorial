@@ -10,7 +10,10 @@ public class Movie {
     @Getter(AccessLevel.PUBLIC)
     @Setter(AccessLevel.PUBLIC)
     private Long id;
+
+    @NonNull
     private String title;
+
     private String description;
     private String country;
     private int rating;
