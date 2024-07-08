@@ -16,7 +16,7 @@ public class MovieTest {
         movie.setTitle("The Matrix");
         movie.setDescription("Matrix description");
         movie.setCountry("US");
-        movie.setId(1L);
+        movie.id(1L);
         movie.setLanguage("English");
         movie.setOfficialSite(new URL("https://www.imdb.com/title/tt0133093/"));
         movie.setRating(8);
@@ -28,14 +28,14 @@ public class MovieTest {
     @Test
     public void testGetId() {
         Assert.assertNotNull(movie);
-        Assert.assertEquals(1L,movie.getId());
+        Assert.assertEquals(1L,movie.id());
     }
 
     @Test
     public void testSetId() {
         Assert.assertNotNull(movie);
-        movie.setId(2L);
-        Assert.assertEquals(2L,movie.getId());
+        movie.id(2L);
+        Assert.assertEquals(2L,movie.id());
 
     }
 

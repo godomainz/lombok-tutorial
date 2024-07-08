@@ -1,17 +1,15 @@
 package org.example;
 
 import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.net.URL;
 
 @Data
 public class Movie {
 
-    @Getter(AccessLevel.PUBLIC)
-    @Setter(AccessLevel.PUBLIC)
+    @Accessors(fluent = true)
     private Long id;
-
-    @NonNull
     private String title;
 
     private String description;
@@ -24,6 +22,7 @@ public class Movie {
 
     @Getter(AccessLevel.PRIVATE)
     @Setter(AccessLevel.PRIVATE)
+    @NonNull
     private final int minutes = 120;
 
 }
