@@ -21,9 +21,9 @@ public class MovieTest {
                 .officialSite(new URL("https://www.imdb.com/title/tt0133093/"))
                 .rating(8)
                 .build();
-        System.out.println(movie.toString());
-        System.out.println(movie.hashCode());
-        System.out.println(movie.equals(movie));
+//        System.out.println(movie.toString());
+//        System.out.println(movie.hashCode());
+//        System.out.println(movie.equals(movie));
     }
 
     @Test
@@ -117,5 +117,13 @@ public class MovieTest {
         Assert.assertNotNull(movie);
         movie.setLanguage("Spanish");
         Assert.assertEquals("Spanish",movie.getLanguage());
+    }
+
+    @Test
+    public void testGetMinutes(){
+        int minutesPlusX = movie.getMinutesPlusX(1);
+        Assert.assertNotNull(minutesPlusX);
+        Assert.assertEquals(121, minutesPlusX);
+
     }
 }
