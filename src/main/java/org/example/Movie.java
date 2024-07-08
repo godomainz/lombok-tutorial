@@ -7,8 +7,8 @@ import java.net.URL;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@EqualsAndHashCode
+@ToString(exclude = "minutes")
+@EqualsAndHashCode(exclude = "minutes")
 public class Movie {
 
     @Getter(AccessLevel.PUBLIC)
