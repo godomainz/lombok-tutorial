@@ -4,8 +4,10 @@ import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.net.URL;
+import java.util.List;
 
 @Data
+@Builder
 public class Movie {
 
     @Accessors(fluent = true)
@@ -22,7 +24,10 @@ public class Movie {
 
     @Getter(AccessLevel.PRIVATE)
     @Setter(AccessLevel.PRIVATE)
-    @NonNull
+    @Builder.Default
     private final int minutes = 120;
+
+    @Singular("cast")
+    private List<String> cast;
 
 }

@@ -12,14 +12,15 @@ public class MovieTest {
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-        movie = new Movie();
-        movie.setTitle("The Matrix");
-        movie.setDescription("Matrix description");
-        movie.setCountry("US");
-        movie.id(1L);
-        movie.setLanguage("English");
-        movie.setOfficialSite(new URL("https://www.imdb.com/title/tt0133093/"));
-        movie.setRating(8);
+        movie = Movie.builder().title("The Matrix")
+                .description("Matrix description")
+                .country("US")
+                .description("Matrix description")
+                .id(1L)
+                .language("English")
+                .officialSite(new URL("https://www.imdb.com/title/tt0133093/"))
+                .rating(8)
+                .build();
         System.out.println(movie.toString());
         System.out.println(movie.hashCode());
         System.out.println(movie.equals(movie));
